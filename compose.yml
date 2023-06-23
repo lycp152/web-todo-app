@@ -1,0 +1,36 @@
+services:
+  app:
+    build: ./conf/web
+    ports:
+      - 8080:80
+    volumes:
+      - ./app:/var/www/html
+  postgres:
+    image: postgres:14.7-alpine3.17
+    environment:
+      POSTGRES_USER: root
+      POSTGRES_PASSWORD: passw@rd
+      POSTGRES_DB: laravel
+    ports:
+      - 5432:5432
+    volumes:
+      - postgresql:/var/lib/postgresql/data
+  node:
+    image: node:lts-alpine
+    working_dir: /var/www/html
+    ports:
+      - 5173:5173
+    volumes:
+      - ./app:/var/www/html
+    command: sh -c "cd /var/www/html && npm run dev"
+  pgadmin4:
+    image: dpage/pgadmin4
+    environment:
+      PGADMIN_DEFAULT_EMAIL: user@example.com
+      PGADMIN_DEFAULT_PASSWORD: passw@rd
+    depends_on:
+      - postgres
+    ports:
+      - 8888:80
+volumes:
+  postgresql:
