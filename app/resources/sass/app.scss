@@ -6,3 +6,37 @@
 
 // Bootstrap
 @import 'bootstrap/scss/bootstrap';
+
+// FontAwesome
+$fa-font-path: '@fortawesome/fontawesome-free/webfonts';
+@import '@fortawesome/fontawesome-free/scss/fontawesome';
+@import '@fortawesome/fontawesome-free/scss/regular';
+@import '@fortawesome/fontawesome-free/scss/solid';
+@import '@fortawesome/fontawesome-free/scss/brands';
+
+.bg-green {
+    background-color: #658e7c;
+}
+
+.btn-green {
+    border: none !important;
+    background-color: #658e7c !important;
+    color: #fff !important;
+}
+
+.btn-blue {
+    border: none !important;
+    background-color: #80b5d6 !important;
+    color: #fff !important;
+}
+
+.btn-orange {
+    border: none !important;
+    background-color: #e3bb90 !important;
+    color: #fff !important;
+}
+
+.header-green {
+    color: #658e7c;
+    font-weight: bolder;
+}
