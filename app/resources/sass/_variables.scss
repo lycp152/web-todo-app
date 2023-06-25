@@ -1,7 +1,24 @@
 // Body
-$body-bg: #f8fafc;
+$body-bg: #f4f4f4;
 
 // Typography
 $font-family-sans-serif: 'Nunito', sans-serif;
 $font-size-base: 0.9rem;
 $line-height-base: 1.6;
+
+// Custom colors
+$navbar-light-brand-color: #fff; // Navbar brand color
+$navbar-light-brand-hover-color: #fff; // Navbar brand hover color
+$navbar-light-color: #fff; // Navbar text color
+$navbar-light-hover-color: #fff; // Navbar link hover color
+$card-cap-bg: #d2e0d9; // Card header background color
+$card-border-width: 0px; // Card border width
+$nav-link-color: #fff; // Navbar link color
+$dropdown-bg: #d2e0d9; // Dropdown background color
+$dropdown-link-hover-bg: #658e7c; // Dropdown link hover background color
+$dropdown-link-hover-color: #fff; // Dropdown link hover color
+
+// form-control background color override
+.form-control {
+    background-color: #fff !important;
+}
